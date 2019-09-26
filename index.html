@@ -1,8 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<H1>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+</head>
 <body>
-  <h1>我是刘铭炜</h1>  
-  <P>我的学号是<span id="studentnumber">18002090123</span></p>
+  <h1>我是<span id="myname"></span></h1>  
+  <P>我的学号是<span id="mynumber"></span></p>
   <img src="matrix.png" />
   <img src="Desert.jpg" id="logo"/>
+  <script>
+    $(function(){
+      $.get("./data.josn",function(result){
+        $("#myname").text(result.myname);
+        $("#mynumber").text(result.mynumber);
+      });
+    })
+  </script>
   </body>
 </html>  
