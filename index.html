@@ -14,10 +14,12 @@
   <img src="Desert.jpg" id="logo"/>
   <script>
     $(function(){
-      $.get("./data.json",function(result){
-        $("#myname").text(result.myname);
-        $("#mynumber").text(result.mynumber);
-      });
+        var callback=function callback(result){
+            $("#myname").text(result.myname);
+         $("#mynumber").text(result.mynumber);
+     };
+      $.get("http://127.0.0.1:8080/data.json",callback);
+       
     })
   </script>
   </body>
