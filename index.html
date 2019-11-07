@@ -18,11 +18,11 @@
             $("#myname").text(result.myname);
          $("#mynumber").text(result.mynumber);
      };
-      $.get("http://127.0.0.1:5503/data.json",callback);
+      $.post("http://127.0.0.1:5503/data.json",{number:"18002090123"} ,callback);
        
     })
     $("#btn").click(function(){
-      $.get("http://127.0.0.1:5503/data.json",callback);
+      $.post("http://127.0.0.1:5503/data.json",callback);
       $("#myname").text(result.myname);
          $("#mynumber").text(result.mynumber);
     })
