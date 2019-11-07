@@ -18,7 +18,14 @@
             $("#myname").text(result.myname);
          $("#mynumber").text(result.mynumber);
      };
-      $.post("http://127.0.0.1:5503/data.json",{number:"18002090123"} ,callback);
+     $.ajax({
+       type:"POST",
+       url:"http://127.0.0.1:5503/data.json",
+       contentType:"application/json",
+       data:{"number":"18002090123"},
+        callback
+      })
+      //$.get("http://127.0.0.1:5503/data.json",{number:"18002090123"} ,callback);
        
     })
     $("#btn").click(function(){
