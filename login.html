@@ -13,8 +13,9 @@
                     $("#btn").click(function(){
                         var data={number:("#number").val(),
                                   password:("#password").val()
-                                };
-                                
+                                }
+                            });
+
                  $.ajax({
                    type:"POST",
                    url:"http://127.0.0.1:5503/login",
@@ -25,8 +26,8 @@
                             location.href='index.html';
                         }
                     }
-                  })
-                  
+                  });
+                    })
               </script>
     用户名:<input type="text" id="number">
     <br>
