@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="jquery-3.4.1.js"></script>
@@ -23,10 +22,9 @@
        url:"http://127.0.0.1:5503/data.json",
        contentType:"application/json",
        data:{"number":"18002090123"},
-        callback
+        success:callback
       })
       //$.get("http://127.0.0.1:5503/data.json",{number:"18002090123"} ,callback);
-       
     })
     $("#btn").click(function(){
       $.post("http://127.0.0.1:5503/data.json",callback);
@@ -35,4 +33,4 @@
     })
   </script>
   </body>
-</html>  
+</html>
