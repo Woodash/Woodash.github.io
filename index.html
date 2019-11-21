@@ -9,6 +9,7 @@
 <body>
   <h1>我是<span id="myname"></span></h1>  
   <P>我的学号是<span id="mynumber"></span></p>
+  <p><a href="login.html"><button id="login" >去登录</button></a></p>
   <img src="matrix.png" />
   <img src="Desert.jpg" id="logo"/>
   <script>
@@ -19,6 +20,9 @@
      };
      $.ajax({
        type:"POST",
+       xhrFields:{
+         withCredentials:true
+       },
        url:"http://127.0.0.1:5503/data.json",
        contentType:"application/json",
        data:{"number":"18002090123"},
